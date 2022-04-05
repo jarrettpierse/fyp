@@ -1,5 +1,8 @@
 // Use this guide to test the graph
 
+// Visualise the Schema:
+CALL db.schema.visualization
+
 // 1. Find the top 3 least busy airports (least arrivals AND departures)
 MATCH (c)-[:ARRIVES]-(a:Airport)-[:DEPARTS]-(f)
 RETURN a, COLLECT(a) as leastBusyAirports
